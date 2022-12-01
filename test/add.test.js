@@ -1,5 +1,5 @@
-var chai = require("chai")
-var add = require ("../src/add.js")
+import chai from "chai"
+import add from "../src/add.js"
 const expect = chai.expect
 
 describe("Add", () => {
