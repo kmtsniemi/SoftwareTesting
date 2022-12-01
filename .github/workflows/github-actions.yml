@@ -9,8 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    runs:
-      using: 'node16'
 
     strategy:
       matrix:
@@ -28,6 +26,8 @@ jobs:
       - run: npm test
       - run: npm install c8 --save-dev
       - run: npm run coverage
+        runs:
+          using: 'node16'
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
