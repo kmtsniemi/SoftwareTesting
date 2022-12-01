@@ -25,9 +25,7 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
       - run: npm install c8 --save-dev
-      - run: npm run coverage
-        runs:
-          using: 'node16'
+      - run: npm run test-coverage
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
