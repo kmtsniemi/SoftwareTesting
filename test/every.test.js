@@ -10,7 +10,7 @@ describe("Every", () => {
             { 'nimi' : 'Raejuusto', 'saatavissa' : false }]
         const fun = ({saatavissa}) => saatavissa
         const res = false
-        expect(every(arr, value => value.saatavissa)).to.equal(true)
+        expect(every(arr, value => value.saatavissa)).to.equal(res)
     }); 
 
     it("Joukolla ei ole alkoita.", () =>{
@@ -33,7 +33,7 @@ describe("Every", () => {
         const fun = ({saatavissa}) => saatavissa
         expect(every(arr, fun)).to.equal(false)
     }); 
-/*
+
     it("Property puuttuu.", () =>{
         const arr = [
             { 'nimi' : 'Luomu maito' },
@@ -43,5 +43,5 @@ describe("Every", () => {
         expect(every(arr, fun)).to.equal(true)
 
     });
-    */
+
 })
