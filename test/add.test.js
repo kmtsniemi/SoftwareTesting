@@ -17,19 +17,17 @@ describe("Add", () => {
         expect(add(first_nro, second_nro)).to.equal(res)
     }); 
 
-/*
     it("Positiiviseen lukuun lisätään merkkijono.", () =>{
         const first_nro = 5.00
         const second_nro = '3.00'
-        expect(function() {add(first_nro, second_nro)}).to.throw(Error)
+        expect(function() {add(first_nro, second_nro)}).to.throw()
     }); 
 
     it("Positiiviseen numeroon lisätään null-arvo.", () =>{
         const first_nro = 5.00
         const second_nro = null
-        expect(function() {add(first_nro, second_nro)}).to.throw(Error)
+        expect(function() {add(first_nro, second_nro)}).to.throw()
     }); 
-*/
 
     it("Positiiviseen kokonaislukuun lisätään nolla.", () =>{
         const first_nro = 4.00
