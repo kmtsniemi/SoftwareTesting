@@ -22,31 +22,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run build --if-present
+      - run: npm install mocha --save-dev
+      - run: npm install chai --save-dev
       - run: npm install c8 --save-dev
       - run: npm install coveralls --save-dev
       - run: npm install mocha-lcov-reporter --save-dev
       - run: npm run coverage
-
-  test-coverage:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - run: npm ci
-      - run: npm install c8 --save-dev
-      - run: npm install coveralls --save-dev
-      - run: npm install mocha-lcov-reporter --save-dev
       - run: npm run coverage-report
 
       - name: Coveralls
