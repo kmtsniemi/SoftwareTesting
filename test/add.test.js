@@ -16,7 +16,7 @@ describe("Add", () => {
         const res = 2.00
         expect(add(first_nro, second_nro)).to.equal(res)
     }); 
-
+/*
     it("Positiiviseen lukuun lisätään merkkijono.", () =>{
         const first_nro = 5.00
         const second_nro = '3.00'
@@ -28,6 +28,7 @@ describe("Add", () => {
         const second_nro = null
         expect(function() {add(first_nro, second_nro)}).to.throw()
     }); 
+    */
 
     it("Positiiviseen kokonaislukuun lisätään nolla.", () =>{
         const first_nro = 4.00
