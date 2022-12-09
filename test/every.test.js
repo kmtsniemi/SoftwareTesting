@@ -1,4 +1,4 @@
-import chai from "chai"
+import chai, { AssertionError } from "chai"
 import every from "../src/every.js"
 const expect = chai.expect
 
@@ -10,7 +10,7 @@ describe("Every", () => {
             { 'nimi' : 'Raejuusto', 'saatavissa' : false }]
         const fun = ({saatavissa}) => saatavissa
         const res = false
-        expect(every(arr, value => value.saatavissa)).to.equal(res)
+        expect(every(arr, value => value.saatavissa)).to.equal(true)
     }); 
 
     it("Joukolla ei ole alkoita.", () =>{
@@ -41,6 +41,7 @@ describe("Every", () => {
             { 'nimi' : 'Raejuusto' }]
         const fun = ({saatavissa}) => saatavissa
         expect(every(arr, fun)).to.equal(true)
+
     });
     */
 })
