@@ -28,8 +28,7 @@ describe("Add", () => {
         const second_nro = null
         expect(function() {add(first_nro, second_nro)}).to.throw()
     }); 
-    */
-
+*/
     it("Positiiviseen kokonaislukuun lisätään nolla.", () =>{
         const first_nro = 4.00
         const second_nro = 0.00
